@@ -22,24 +22,35 @@
     <!-- Lien vers librairie font-awesome en acces web-->
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"> -->
 
+    <!-- Lien vers police Raleway via API google
+    utilisé pour tests mais depuis police embarquée en local -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> -->
+
     <link rel="stylesheet" href="../css/style.css">
     <title>Reservia</title>
 </head>
 
 <body>
     <header>
-        <!-- Logo : Reste à determiner format le plus adapté (png/svg?) -->
-        <img alt="Logo Reservia" src="../images/logo/Reservia.png">
-        <!-- <img alt="Logo Reservia" src="../images/logo/Reservia.svg"> -->
+        <div id="bannière">
+            <!-- Logo : Reste à determiner format le plus adapté (png/svg?)
+                Svg reste net même en cas de changement de taille 
+                    => plus esthéthique  -->
+            <!-- <img alt="Logo Reservia" src="../images/logo/Reservia.png"> -->
+            <div id="logo_conteneur">
+                <img id="logo_reservia" alt="Logo_Reservia" src="../images/logo/Reservia.svg">
+            </div>
 
-        <nav>
-            <!-- Navigation : lien vers sections de la même page -->
-            <a href="#hébergements">Hébergements</a>
-            <a href="#activités">Activités</a>
-        </nav>
+            <nav>
+                <!-- Navigation : lien vers sections de la même page -->
+                <a href="#hébergements" id="lien_hébergements">Hébergements</a>
+                <a href="#activités" id="lien_activités">Activités</a>
+            </nav>
 
-        <!-- Lien d'inscription, page cible non implémentée -->
-        <a id="lien_inscription" href="#">S'inscrire</a>
+            <!-- Lien d'inscription, page cible non implémentée -->
+            <a id="lien_inscription" href="#">S'inscrire</a>
+        </div>
 
         <div id="description_site"> 
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -49,6 +60,7 @@
         <div id="barre_recherche">
             <form method="post">
                 <p>
+                    <i class="fas fa-map-marker-alt"></i>
                     <input type="search" name="search" id="search"/>
                     <!-- Bouton de recherche contenant soit le texte "Rechercher" soit l'icone FA Loupe 
                          A choisir en fonction du type d'écran mobile/large : à masquer/afficher dans css-->
@@ -59,7 +71,7 @@
         </div>
 
         <div id="filtres">
-            <p>Filtres</p>
+            <h2>Filtres</h2>
 
             <!-- Bouton filtres : action correspondante non implémentée -->
             <div id="boutons_filtres">
@@ -113,7 +125,7 @@
         <section id="hébergements_trouvés">
             <!-- Titres en h2 et non h1 car warning au W3C sinon -->
             <h2>Hébergements à Marseille</h2>
-            <div class="cartes">
+            <div class="conteneur_cartes">
 
                 <a href="#">
                     <!-- Images html plutot que background css 
@@ -201,12 +213,12 @@
                 </a>
                 
             </div>
-            <p>Afficher plus</p>
+            <h4>Afficher plus</h4>
         </section>
         
         <section id="populaires">
             <h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
-            <div class="cartes">
+            <div class="conteneur_cartes">
 
                 <a href="#">
                     <img src="../images/populaires/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre Hôtel Le soleil du matin">
@@ -256,7 +268,7 @@
 
     <section id="activités">
         <h2>Activités à Marseille</h2>
-        <div class="cartes">
+        <div class="conteneur_cartes">
 
             <a href="#">
                 <img src="../images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">

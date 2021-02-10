@@ -1,19 +1,343 @@
+
+
+/* ------------------ */
+/* DEFINITION POLICES */
+/* ------------------ */
+
+
+/* Définition police Raleway en deux parties :
+    1) Texte normal = Raleway Regular 400
+    2) Texte en gras = Raleway Bold 700 */
 @font-face {
-    font-family: 'ralewaythin';
-    src: url('../fonts/raleway-variablefont_wght-webfont.eot');
-    src: url('../fonts/raleway-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-variablefont_wght-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-variablefont_wght-webfont.woff') format('woff'),
-         url('../fonts/raleway-variablefont_wght-webfont.ttf') format('truetype'),
-         url('../fonts/raleway-variablefont_wght-webfont.svg#ralewaythin') format('svg');
+    font-family: 'Raleway';
+    src: url('../fonts/regular/raleway-regular-webfont.eot');
+    src: url('../fonts/regular/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/regular/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/regular/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/regular/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/regular/raleway-regular-webfont.svg#ralewayregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 
-#test_Raleway{
-    font-family: "ralewaythin";
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/bold/raleway-bold-webfont.eot');
+    src: url('../fonts/bold/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bold/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/bold/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/bold/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/bold/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
 }
 
+
+/* ----------------- */
+/* ELEMENTS GENERAUX */
+/* ----------------- */
+
+body{
+    /* Même police pour toute la page */
+    font-family: "Raleway", sans-serif;;
+}
+
+/* Détermination des éléments en texte gras */
+h1, h2, h3, .prix, .texte_bouton, #lien_inscription, #search, #bouton_valid_texte{
+    font-weight:bold;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+h1, h2{
+    font-size:1.3em;
+}
+
+h3{
+    font-size:0.8em;
+}
+
+
+/* ------ */
+/* HEADER */
+/* ------ */
+
+#bannière{
+    padding-top: 5px;
+    display:flex;
+    /* align-items:center; */
+    justify-content: space-between;
+}
+
+#logo_conteneur{
+    flex:1;
+}
+
+nav{
+    display:flex;
+    /* align-items:center; */
+}
+
+#lien_inscription, #lien_activités, #lien_hébergements{
+    padding-left:15px;
+    padding-right:15px;
+
+}
+
+#lien_inscription{
+    color:#0065FC;
+}
+
+#lien_hébergements{
+    color:#0065FC;
+}
+
+
+/* -------- */
+/* SECTIONS */
+/* -------- */
+
+.conteneur_cartes p{
+    font-size: 0.7em;
+}
+
+.étoiles{
+    display:flex;
+    font-size: 0.6em;
+}
+
+.star_on{
+    color:#0065FC;
+}
+
+.star_off{
+    color:#cac9c9;
+}
+
+.conteneur_cartes a{
+    box-shadow: 0px 5px 5px #c4c3c3;
+    ;
+}
+
+#hébergements_trouvés, footer{
+    background-color: #F2F2F2;
+}
+
+#hébergements .conteneur_cartes{
+    display:flex;
+    /* flex-direction: row; */
+    /* flex-wrap:wrap; */
+    flex-flow: row wrap;
+    /* align-content: space-between; */
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#hébergements a{
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    border:5px #FFFFFF solid;
+    /* margin: auto; */
+    display:flex;
+    flex-direction: column;
+}
+
+#activités a{
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    display:flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+/* ------ */
+/* FOOTER */
+/* ------ */
+
+footer{
+    display:flex;
+}
+
+ul{
+    list-style-type:none;
+}
+
+
+/* ---------------------------- */
+/* Affichage spécifique Mobiles */
+/* ---------------------------- */
+
+@media all and (max-device-width:767px){
+
+    #bloc_page
+    {
+        /* Largeur de la page auto pluto que 900px */
+        width: auto;
+    }
+
+
+    /* HEADER */
+
+    /* Affichage logo/navigation sur deux lignes. Les liens hébergements et activités sont sur la seconde ligne */
+    #bannière{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    nav{
+        order:3;
+        width:100%;
+        text-align: center;
+        margin-top:10px;
+    }
+    #lien_hébergements, #lien_activités{
+        width:50%;
+        padding-bottom:10px;
+    }
+    /* Bordure en dessous des liens au lieu d'en dessous */
+    #lien_hébergements{
+        border-bottom:2px #0065FC solid; 
+    }
+    #lien_activités{
+        border-bottom:2px #F2F2F2 solid; 
+    }
+
+
+    /* Masquer le bouton avec texte, on affiche celui avec l'icone loupe uniquement */
+    #bouton_valid_texte{
+        display:none;
+    }
+
+
+    #hébergements_trouvés img{
+        width: 220px;
+        height: 110px;
+        object-fit:cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    #populaires img{
+        width: 120px;
+        height: 120px;
+        object-fit:cover;
+    }
+    
+    #activités img{
+        width: 250px;
+        height: 330px;
+        object-fit:cover;
+    }
+
+}
+
+
+/* ------------------------------- */
+/* Affichage commun Tablettes et PC*/
+/* ------------------------------- */
+
+@media all and (min-width:768px) {
+
+    body{
+        /* Largeur de la page auto pluto que 900px */
+        width: auto;
+    }
+
+    
+      /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
+      #bouton_valid_icone{
+        display:none;
+    }
+
+    #populaires{
+        background-color: #F2F2F2;
+    }
+    
+    #hébergements_trouvés img{
+        width: 220px;
+        height: 110px;
+        object-fit:cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    #populaires img{
+        width: 120px;
+        height: 120px;
+        object-fit:cover;
+    }
+    
+    #activités img{
+        width: 250px;
+        height: 330px;
+        object-fit:cover;
+    }
+
+    #activités a{
+        width: 250px;
+    }
+
+    #lien_hébergements:hover{
+        border-top:2px #0065FC solid; 
+    }
+    #lien_activités:hover{
+        border-top:2px #F2F2F2 solid; 
+    }
+    
+
+    #lien_hébergements, #lien_activités, #lien_inscription{
+        padding-top:25px;
+    }
+}
+
+
+/* ----------------------------- */
+/* Affichage spécifique Tablettes*/
+/* ----------------------------- */
+
+@media all and (min-width:768px) and (max-width:991px){
+
+    body{
+        /* Largeur de la page auto pluto que 900px */
+        width: auto;
+    }
+
+ 
+}
+
+
+
+/* ----------------------- */
+/* Affichage spécifique PC */
+/* ----------------------- */
+
+@media all and (min-width:992px){
+
+    body{
+        width: 992px;
+        margin: auto;
+    }
+
+    /* Le footer est un peu plus large que le header et les sections */
+    footer{
+        width: 100%;
+    }
+    header, #hébergements, #activités{
+        width: 90%;
+    }
+
+
+
+}
+/* ------------------------------------- */
+/* Affichage spécifique PC grands écrans */
+/* ------------------------------------- */
+/* @media (min-device-width:992){
+    
+} */
 
 
