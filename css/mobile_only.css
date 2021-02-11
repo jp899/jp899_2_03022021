@@ -1,0 +1,97 @@
+/* ---------------------------- */
+/* Affichage spécifique Mobiles */
+/* ---------------------------- */
+
+@media all and (max-width:767px){
+
+    #body
+    {
+        /* Largeur de la page auto pluto que 900px */
+        width: auto;
+    }
+
+
+    /* ------ */
+    /* HEADER */
+    /* ------ */
+
+    /* Affichage logo/navigation sur deux lignes. Les liens hébergements et activités sont sur la seconde ligne */
+    #bannière{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    nav{
+        order:3;
+        width:100%;
+        text-align: center;
+        margin-top:10px;
+    }
+    #lien_hébergements, #lien_activités{
+        width:50%;
+        padding-bottom:10px;
+    }
+    /* Bordure en dessous des liens au lieu d'en dessous */
+    #lien_hébergements{
+        border-bottom:2px #0065FC solid; 
+    }
+    #lien_activités{
+        border-bottom:2px #F2F2F2 solid; 
+    }
+
+
+    /* Masquer le bouton avec texte, on affiche celui avec l'icone loupe uniquement */
+    #bouton_valid_texte{
+        display:none;
+    }
+
+    /* Augmenter legèrement la taille de police de la phrase titre */
+    h1{
+        font-size:1.4em;
+    }
+
+    /* Titre filtre au dessus des filtres */
+    #filtres{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    /* Boutons sur plusieurs lignes */
+    #boutons_filtres{
+        flex-wrap: wrap;
+        margin-top:-15px;
+
+    }
+
+    #boutons_filtres form {
+        margin-top:10px;
+    }
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+
+    #hébergements_trouvés img{
+        width: 220px;
+        height: 110px;
+        object-fit:cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    #populaires img{
+        width: 120px;
+        height: 120px;
+        object-fit:cover;
+    }
+    
+    #activités img{
+        width: 250px;
+        height: 330px;
+        object-fit:cover;
+    }
+
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
+}

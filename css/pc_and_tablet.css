@@ -1,0 +1,75 @@
+/* ------------------------------- */
+/* Affichage commun Tablettes et PC*/
+/* ------------------------------- */
+
+@media all and (min-width:768px) {
+
+    body{
+        /* Largeur de la page auto pluto que fixe*/
+        width: auto;
+    }
+
+    
+    /* ------ */
+    /* HEADER */
+    /* ------ */
+
+
+    /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
+    #bouton_valid_icone{
+        display:none;
+    }
+    
+    #lien_hébergements:hover{
+        border-top:2px #0065FC solid; 
+    }
+    #lien_activités:hover{
+        border-top:2px #F2F2F2 solid; 
+    }
+    
+    #lien_hébergements, #lien_activités, #lien_inscription{
+        padding-top:25px;
+    }
+    
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+    
+    #populaires{
+        background-color: #F2F2F2;
+    }
+    
+    #hébergements_trouvés img{
+        width: 220px;
+        height: 110px;
+        object-fit:cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    #populaires img{
+        width: 120px;
+        height: 120px;
+        object-fit:cover;
+    }
+    
+    #activités img{
+        width: 250px;
+        height: 330px;
+        object-fit:cover;
+    }
+
+    #activités a{
+        width: 250px;
+    }
+
+
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
+}
+
+
+

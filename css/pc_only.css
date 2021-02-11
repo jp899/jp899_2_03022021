@@ -1,0 +1,41 @@
+
+/* ----------------------- */
+/* Affichage spécifique PC */
+/* ----------------------- */
+
+@media all and (min-width:992px){
+
+    body{
+        width: 992px;
+        margin: auto;
+    }
+
+
+    header, #hébergements, #activités{
+        width: 90%;
+    }
+
+
+    /* ------ */
+    /* HEADER */
+    /* ------ */
+
+    /* Abbaisser un peu le logo par rapport au bord haut de la page */
+    #logo_conteneur{
+        margin-top: 17px;
+    }
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+
+
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
+    /* Le footer est un peu plus large que le header et les sections */
+    footer{
+        width: 100%;
+    }
+}
