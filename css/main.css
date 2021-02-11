@@ -118,26 +118,12 @@ nav{
     border-right:0px;
 }
 
-#valid_button_icon{
-    font-size:0.9em;
+#valid_button{
     background-color:#0065FC; 
     color:#FFFFFF;
-    padding:11px 11px 11px 11px;
-    margin-left:-8px;
-    border-radius: 10px;
     border:0px;
 }
 
-#valid_button_text{
-    font-size: 0.7em;
-    background-color:#0065FC; 
-    color:#FFFFFF;
-    padding:11px;
-    margin-left:-5px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    border:0px;
-}
 
 /* Mise en forme des boutons filtres */
 #filters{

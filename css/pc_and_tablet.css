@@ -16,6 +16,13 @@
 
 
     /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
+    #valid_button{
+        font-size: 0.7em;
+        padding:11px;
+        margin-left:-5px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
     #valid_button_icon{
         display:none;
     }
