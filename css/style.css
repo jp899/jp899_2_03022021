@@ -1,9 +1,7 @@
 
-
 /* ------------------ */
 /* DEFINITION POLICES */
 /* ------------------ */
-
 
 /* Définition police Raleway en deux parties :
     1) Texte normal = Raleway Regular 400
@@ -39,9 +37,9 @@
 /* ELEMENTS GENERAUX */
 /* ----------------- */
 
-body{
+body, input, button{
     /* Même police pour toute la page */
-    font-family: "Raleway", sans-serif;;
+    font-family: "Raleway", sans-serif;
 }
 
 /* Détermination des éléments en texte gras */
@@ -70,8 +68,6 @@ h3{
 #bannière{
     padding-top: 5px;
     display:flex;
-    /* align-items:center; */
-    justify-content: space-between;
 }
 
 #logo_conteneur{
@@ -80,22 +76,124 @@ h3{
 
 nav{
     display:flex;
-    /* align-items:center; */
 }
 
 #lien_inscription, #lien_activités, #lien_hébergements{
     padding-left:15px;
     padding-right:15px;
-
 }
 
-#lien_inscription{
+#lien_inscription, #lien_hébergements{
     color:#0065FC;
 }
 
-#lien_hébergements{
-    color:#0065FC;
+/* Reduire l'espacement entre les deux phrases de description */
+#description_site h1{
+    margin-bottom: 8px;
 }
+#description_site p{
+    margin-top: 8px;
+}
+
+
+/* Mise en forme de la barre de recherche */
+#conteneur_barre_recherche{
+    display:flex;
+    flex-direction: row;
+}
+
+#icone_localisation{
+    background-color:#F2F2F2 ;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding:10px 13px 12px 13px;
+}
+
+#search{
+    padding:10px;
+    margin-right:0px;
+    margin-left:0px;
+    border:#F2F2F2 solid 1px;
+    border-left: 0px;
+    border-right:0px;
+}
+
+#bouton_valid_icone{
+    font-size:0.9em;
+    background-color:#0065FC; 
+    color:#FFFFFF;
+    padding:11px 11px 11px 11px;
+    margin-left:-8px;
+    border-radius: 10px;
+    border:0px;
+}
+
+#bouton_valid_texte{
+    font-size: 0.7em;
+    background-color:#0065FC; 
+    color:#FFFFFF;
+    padding:11px;
+    margin-left:-5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border:0px;
+}
+
+/* Mise en forme des boutons filtres */
+#filtres{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#boutons_filtres{
+    display:flex;
+    flex-direction: row;
+    padding-left:25px;
+}
+
+#boutons_filtres form{
+    margin-right:12px;
+    display: flex;
+    flex-direction: row;
+}
+
+#boutons_filtres button{
+    background-color: #FFFFFF;
+    border-left:0px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    border:0px;
+   
+}
+
+.icone_bouton{
+    color:#0065FC;
+    background-color:#DEEBFF;
+    border-radius: 180px;
+    height:31px;
+    width:31px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-right:-28px;
+    z-index: 1;
+}
+
+
+.texte_bouton{
+    border:#d3d1d1 solid 1px;
+    border-radius: 180px;
+    border-left:0px;
+    height:29px;
+    padding-left: 35px;
+    padding-right: 10px;
+    display: flex;
+    align-items:center;
+}
+
+
 
 
 /* -------- */
@@ -121,7 +219,6 @@ nav{
 
 .conteneur_cartes a{
     box-shadow: 0px 5px 5px #c4c3c3;
-    ;
 }
 
 #hébergements_trouvés, footer{
@@ -155,6 +252,7 @@ nav{
     flex-direction: column;
 }
 
+
 /* ------ */
 /* FOOTER */
 /* ------ */
@@ -174,14 +272,16 @@ ul{
 
 @media all and (max-device-width:767px){
 
-    #bloc_page
+    #body
     {
         /* Largeur de la page auto pluto que 900px */
         width: auto;
     }
 
 
+    /* ------ */
     /* HEADER */
+    /* ------ */
 
     /* Affichage logo/navigation sur deux lignes. Les liens hébergements et activités sont sur la seconde ligne */
     #bannière{
@@ -212,6 +312,31 @@ ul{
         display:none;
     }
 
+    /* Augmenter legèrement la taille de police de la phrase titre */
+    h1{
+        font-size:1.4em;
+    }
+
+    /* Titre filtre au dessus des filtres */
+    #filtres{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    /* Boutons sur plusieurs lignes */
+    #boutons_filtres{
+        flex-wrap: wrap;
+        margin-top:-15px;
+
+    }
+
+    #boutons_filtres form {
+        margin-top:10px;
+    }
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
 
     #hébergements_trouvés img{
         width: 220px;
@@ -233,6 +358,10 @@ ul{
         object-fit:cover;
     }
 
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
 }
 
 
@@ -243,16 +372,37 @@ ul{
 @media all and (min-width:768px) {
 
     body{
-        /* Largeur de la page auto pluto que 900px */
+        /* Largeur de la page auto pluto que fixe*/
         width: auto;
     }
 
     
-      /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
-      #bouton_valid_icone{
+    /* ------ */
+    /* HEADER */
+    /* ------ */
+
+
+    /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
+    #bouton_valid_icone{
         display:none;
     }
+    
+    #lien_hébergements:hover{
+        border-top:2px #0065FC solid; 
+    }
+    #lien_activités:hover{
+        border-top:2px #F2F2F2 solid; 
+    }
+    
+    #lien_hébergements, #lien_activités, #lien_inscription{
+        padding-top:25px;
+    }
+    
 
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+    
     #populaires{
         background-color: #F2F2F2;
     }
@@ -281,17 +431,11 @@ ul{
         width: 250px;
     }
 
-    #lien_hébergements:hover{
-        border-top:2px #0065FC solid; 
-    }
-    #lien_activités:hover{
-        border-top:2px #F2F2F2 solid; 
-    }
-    
 
-    #lien_hébergements, #lien_activités, #lien_inscription{
-        padding-top:25px;
-    }
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
 }
 
 
@@ -302,11 +446,31 @@ ul{
 @media all and (min-width:768px) and (max-width:991px){
 
     body{
-        /* Largeur de la page auto pluto que 900px */
+        /* Largeur de la page auto plutot que fixe */
         width: auto;
     }
 
- 
+
+    /* ------ */
+    /* HEADER */
+    /* ------ */
+
+    /* Reduire l'espace entre le haut de la page et les liens de navigation */
+    #lien_inscription, #lien_activités, #lien_hébergements{
+        padding-top:15px;
+    }
+
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+
+
+
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
 }
 
 
@@ -322,22 +486,44 @@ ul{
         margin: auto;
     }
 
-    /* Le footer est un peu plus large que le header et les sections */
-    footer{
-        width: 100%;
-    }
+
     header, #hébergements, #activités{
         width: 90%;
     }
 
 
+    /* ------ */
+    /* HEADER */
+    /* ------ */
 
+    /* Abbaisser un peu le logo par rapport au bord haut de la page */
+    #logo_conteneur{
+        margin-top: 17px;
+    }
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+
+
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
+    /* Le footer est un peu plus large que le header et les sections */
+    footer{
+        width: 100%;
+    }
 }
+
+
 /* ------------------------------------- */
 /* Affichage spécifique PC grands écrans */
 /* ------------------------------------- */
+
 /* @media (min-device-width:992){
     
+ 
 } */
 
 
