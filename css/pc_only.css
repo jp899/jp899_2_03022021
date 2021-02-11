@@ -11,7 +11,7 @@
     }
 
 
-    header, #hébergements, #activités{
+    header, #hebergements, #activites{
         width: 90%;
     }
 
@@ -21,7 +21,7 @@
     /* ------ */
 
     /* Abbaisser un peu le logo par rapport au bord haut de la page */
-    #logo_conteneur{
+    #logo_container{
         margin-top: 17px;
     }
 

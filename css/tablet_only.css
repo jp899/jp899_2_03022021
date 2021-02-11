@@ -16,7 +16,7 @@
     /* ------ */
 
     /* Reduire l'espace entre le haut de la page et les liens de navigation */
-    #lien_inscription, #lien_activités, #lien_hébergements{
+    #hebergements_link, #activites_link, #signup_link{
         padding-top:15px;
     }
 

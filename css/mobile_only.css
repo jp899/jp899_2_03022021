@@ -16,7 +16,7 @@
     /* ------ */
 
     /* Affichage logo/navigation sur deux lignes. Les liens hébergements et activités sont sur la seconde ligne */
-    #bannière{
+    #banner{
         flex-wrap: wrap;
         align-items: center;
     }
@@ -26,21 +26,21 @@
         text-align: center;
         margin-top:10px;
     }
-    #lien_hébergements, #lien_activités{
+    #hebergements_link, #activites_link{
         width:50%;
         padding-bottom:10px;
     }
     /* Bordure en dessous des liens au lieu d'en dessous */
-    #lien_hébergements{
+    #hebergements_link{
         border-bottom:2px #0065FC solid; 
     }
-    #lien_activités{
+    #activites_link{
         border-bottom:2px #F2F2F2 solid; 
     }
 
 
     /* Masquer le bouton avec texte, on affiche celui avec l'icone loupe uniquement */
-    #bouton_valid_texte{
+    #valid_button_text{
         display:none;
     }
 
@@ -50,19 +50,19 @@
     }
 
     /* Titre filtre au dessus des filtres */
-    #filtres{
+    #filters{
         flex-direction: column;
         align-items:flex-start;
     }
 
     /* Boutons sur plusieurs lignes */
-    #boutons_filtres{
+    #filter_buttons{
         flex-wrap: wrap;
         margin-top:-15px;
 
     }
 
-    #boutons_filtres form {
+    #filter_buttons form{
         margin-top:10px;
     }
 
@@ -70,7 +70,7 @@
     /* SECTIONS */
     /* -------- */
 
-    #hébergements_trouvés img{
+    #hebergements_found img{
         width: 220px;
         height: 110px;
         object-fit:cover;
@@ -84,7 +84,7 @@
         object-fit:cover;
     }
     
-    #activités img{
+    #activites img{
         width: 250px;
         height: 330px;
         object-fit:cover;

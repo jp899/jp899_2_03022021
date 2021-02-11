@@ -16,18 +16,18 @@
 
 
     /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
-    #bouton_valid_icone{
+    #valid_button_icon{
         display:none;
     }
     
-    #lien_hébergements:hover{
+    #hebergements_link:hover{
         border-top:2px #0065FC solid; 
     }
-    #lien_activités:hover{
+    #activites_link:hover{
         border-top:2px #F2F2F2 solid; 
     }
     
-    #lien_hébergements, #lien_activités, #lien_inscription{
+    #hebergements_link, #activites_link, #signup_link{
         padding-top:25px;
     }
     
@@ -40,7 +40,7 @@
         background-color: #F2F2F2;
     }
     
-    #hébergements_trouvés img{
+    #hebergements_found img{
         width: 220px;
         height: 110px;
         object-fit:cover;
@@ -54,13 +54,13 @@
         object-fit:cover;
     }
     
-    #activités img{
+    #activites img{
         width: 250px;
         height: 330px;
         object-fit:cover;
     }
 
-    #activités a{
+    #activites a{
         width: 250px;
     }
 

@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+
     <!-- Suppression du dezoom par defaut sur mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Insertion du favicon -->
-    <!-- <link rel="shortcut icon" href="../images/logo/Reservia.png"> -->
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
@@ -16,100 +16,88 @@
     <meta name="msapplication-config" content="../images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Lien vers librairie font-awesome en local -->
+    <!-- Lien vers librairie font-awesome -->
     <link rel="stylesheet" href="../lib/font_awesome/css/all.css">
     
-    <!-- Lien vers librairie font-awesome en acces web-->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"> -->
-
-    <!-- Lien vers police Raleway via API google
-    utilisé pour tests mais depuis police embarquée en local -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> -->
-
-
+    <!-- Fichiers css du projet -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/mobile_only.css">
     <link rel="stylesheet" href="../css/pc_and_tablet.css">
     <link rel="stylesheet" href="../css/tablet_only.css">
     <link rel="stylesheet" href="../css/pc_only.css">
 
-
     <title>Reservia</title>
 </head>
 
 <body>
     <header>
-        <div id="bannière">
-            <!-- Logo : Reste à determiner format le plus adapté (png/svg?)
-                Svg reste net même en cas de changement de taille 
-                    => plus esthéthique  -->
-            <!-- <img alt="Logo Reservia" src="../images/logo/Reservia.png"> -->
-            <div id="logo_conteneur">
+        <div id="banner">
+
+            <div id="logo_container">
                 <img id="logo_reservia" alt="Logo_Reservia" src="../images/logo/Reservia.svg">
             </div>
 
             <nav>
                 <!-- Navigation : lien vers sections de la même page -->
-                <a href="#hébergements" id="lien_hébergements">Hébergements</a>
-                <a href="#activités" id="lien_activités">Activités</a>
+                <a href="#hebergements" id="hebergements_link">Hébergements</a>
+                <a href="#activites" id="activites_link">Activités</a>
             </nav>
 
             <!-- Lien d'inscription, page cible non implémentée -->
-            <a id="lien_inscription" href="#">S'inscrire</a>
+            <a id="signup_link" href="#">S'inscrire</a>
         </div>
 
-        <div id="description_site"> 
+        <div id="site_description"> 
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
         </div>
 
-        <div id="barre_recherche">
+        <!-- <div id="search_bar"> -->
             <form method="post">
-                <p id="conteneur_barre_recherche">
-                <span id="conteneur_icone_localisation">
-                    <i class="fas fa-map-marker-alt" id="icone_localisation"></i>
+                <p id="search_bar">
+                <span id="locate_icon_container">
+                    <i class="fas fa-map-marker-alt" id="locate_icon"></i>
                 </span>
                     <input type="search" name="search" id="search" placeholder="Marseille, France"/>
                     <!-- Bouton de recherche contenant soit le texte "Rechercher" soit l'icone FA Loupe 
                          A choisir en fonction du type d'écran mobile/large : à masquer/afficher dans css-->
-                    <button type="submit"  id="bouton_valid_icone"><i class="fas fa-search"></i></button>
-                    <button type="submit"  id="bouton_valid_texte">Rechercher</button>
+                    <button type="submit"  id="valid_button_icon"><i class="fas fa-search"></i></button>
+                    <button type="submit"  id="valid_button_text">Rechercher</button>
                 </p>
             </form>
-        </div>
+        <!-- </div> -->
 
-        <div id="filtres">
+        <div id="filters">
             <h2>Filtres</h2>
 
             <!-- Bouton filtres : action correspondante non implémentée -->
-            <div id="boutons_filtres">
+            <div id="filter_buttons">
                 
-                <form id="bouton_economique" action="/button-type">
+                <form id="button_economique" action="/button-type">
                     <button type="button" >
-                        <i class="fas fa-money-bill-wave icone_bouton"></i>
-                        <span class="texte_bouton">&#201;conomique</span>
+                        <i class="fas fa-money-bill-wave button_icon"></i>
+                        <span class="button_text">&#201;conomique</span>
                     </button>
                 </form>
                 
-                <form id="bouton_familial">
+                <form id="button_familial">
                     <button type="button" >
-                        <i class="fas fa-child icone_bouton"></i>
-                        <span class="texte_bouton">Familial</span>
+                        <i class="fas fa-child button_icon"></i>
+                        <span class="button_text">Familial</span>
                     </button>
                 </form>
                 
-                <form id="bouton_romantique">
+                <form id="button_romantique">
                     <button type="button" >
-                        <i class="fas fa-heart icone_bouton"></i>
-                        <span class="texte_bouton">Romantique</span>
+                        <i class="fas fa-heart button_icon"></i>
+                        <span class="button_text">Romantique</span>
                     </button>
                 </form>
                 
-                <form id="bouton_animaux">
+                <form id="button_animaux">
                     <button type="button" >
-                        <i class="fas fa-dog icone_bouton"></i>
-                        <span class="texte_bouton">Animaux autorisés</span>
+                        <i class="fas fa-dog button_icon"></i>
+                        <span class="button_text">Animaux autorisés</span>
                     </button>
                 </form>
 
@@ -125,11 +113,11 @@
     </header>
 
 
-    <div id="hébergements">
-        <section id="hébergements_trouvés">
+    <div id="hebergements">
+        <section id="hebergements_found">
             <!-- Titres en h2 et non h1 car warning au W3C sinon -->
             <h2>Hébergements à Marseille</h2>
-            <div class="conteneur_cartes">
+            <div class="card_container">
 
                 <a href="#">
                     <!-- Images html plutot que background css 
@@ -138,8 +126,8 @@
                     <img src="../images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre Auberge la Cannebiere">
                     <h3>Auberge la Cannebière</h3>
                     <!-- Classe prix: mise en forme spécifique pour le prix des chambres -->
-                    <p>Nuit à partir de <span class="prix">25 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">25 &euro;</span></p>
+                    <div class="stars">
                         <!-- Classe star_on =>étoile activée/bleue. 
                                     star_off =>étoile éteinte/grisée  -->
                         <i class="fas fa-star star_on"></i>
@@ -153,8 +141,8 @@
                 <a href="#">
                     <img src="../images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre Hôtel du port">
                     <h3>Hôtel du port</h3>
-                    <p>Nuit à partir de <span class="prix">52 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">52 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -166,8 +154,8 @@
                 <a href="#">
                     <img src="../images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre Hôtel Les mouettes">
                     <h3>Hôtel Les mouettes</h3>
-                    <p>Nuit à partir de <span class="prix">76 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">76 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -179,8 +167,8 @@
                 <a href="#">
                     <img src="../images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre Hôtel de la mer">
                     <h3>Hôtel de la mer</h3>
-                    <p>Nuit à partir de <span class="prix">46 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">46 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -192,8 +180,8 @@
                 <a href="#">
                     <img src="../images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre Auberge Le Panier">
                     <h3>Auberge Le Panier</h3>
-                    <p>Nuit à partir de <span class="prix">23 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">23 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -205,8 +193,8 @@
                 <a href="#">
                     <img src="../images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre Hôtel chez Amina">
                     <h3>Hôtel chez Amina</h3>
-                    <p>Nuit à partir de <span class="prix">96 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">96 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -221,13 +209,13 @@
         
         <section id="populaires">
             <h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
-            <div class="conteneur_cartes">
+            <div class="card_container">
 
                 <a href="#">
                     <img src="../images/populaires/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre Hôtel Le soleil du matin">
                     <h3>Hôtel Le soleil du matin</h3>
-                    <p>Nuit à partir de <span class="prix">128 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">128 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -239,8 +227,8 @@
                 <a href="#">
                     <img src="../images/populaires/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau">
                     <h3>Au c&oelig;ur de l'eau Chambres d'hôtes</h3>
-                    <p>Nuit à partir de <span class="prix">71 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">71 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -252,8 +240,8 @@
                 <a href="#">
                     <img src="../images/populaires/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre Hôtel Tout bleu et Blanc">
                     <h3>Hôtel Tout bleu et Blanc</h3>
-                    <p>Nuit à partir de <span class="prix">68 &euro;</span></p>
-                    <div class="étoiles">
+                    <p>Nuit à partir de <span class="price">68 &euro;</span></p>
+                    <div class="stars">
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
                         <i class="fas fa-star star_on"></i>
@@ -269,9 +257,9 @@
     </div>
 
 
-    <section id="activités">
+    <section id="activites">
         <h2>Activités à Marseille</h2>
-        <div class="conteneur_cartes">
+        <div class="card_container">
 
             <a href="#">
                 <img src="../images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">

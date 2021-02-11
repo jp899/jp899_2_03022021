@@ -43,7 +43,7 @@
 }
 
 /* Détermination des éléments en texte gras */
-h1, h2, h3, .prix, .texte_bouton, #lien_inscription, #search, #bouton_valid_texte{
+h1, h2, h3, .price, .button_text, #signup_link, #search, #valid_button_text{
     font-weight:bold;
 }
 
@@ -65,12 +65,12 @@ h3{
 /* HEADER */
 /* ------ */
 
-#bannière{
+#banner{
     padding-top: 5px;
     display:flex;
 }
 
-#logo_conteneur{
+#logo_container{
     flex:1;
 }
 
@@ -78,31 +78,31 @@ nav{
     display:flex;
 }
 
-#lien_inscription, #lien_activités, #lien_hébergements{
+#signup_link, #activites_link, #hebergements_link{
     padding-left:15px;
     padding-right:15px;
 }
 
-#lien_inscription, #lien_hébergements{
+#signup_link, #hebergements_link{
     color:#0065FC;
 }
 
 /* Reduire l'espacement entre les deux phrases de description */
-#description_site h1{
+#site_description h1{
     margin-bottom: 8px;
 }
-#description_site p{
+#site_description p{
     margin-top: 8px;
 }
 
 
 /* Mise en forme de la barre de recherche */
-#conteneur_barre_recherche{
+#search_bar{
     display:flex;
     flex-direction: row;
 }
 
-#icone_localisation{
+#locate_icon{
     background-color:#F2F2F2 ;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
@@ -118,7 +118,7 @@ nav{
     border-right:0px;
 }
 
-#bouton_valid_icone{
+#valid_button_icon{
     font-size:0.9em;
     background-color:#0065FC; 
     color:#FFFFFF;
@@ -128,7 +128,7 @@ nav{
     border:0px;
 }
 
-#bouton_valid_texte{
+#valid_button_text{
     font-size: 0.7em;
     background-color:#0065FC; 
     color:#FFFFFF;
@@ -140,25 +140,25 @@ nav{
 }
 
 /* Mise en forme des boutons filtres */
-#filtres{
+#filters{
     display:flex;
     flex-direction: row;
     align-items: center;
 }
 
-#boutons_filtres{
+#filter_buttons{
     display:flex;
     flex-direction: row;
     padding-left:25px;
 }
 
-#boutons_filtres form{
+#filter_buttons form{
     margin-right:12px;
     display: flex;
     flex-direction: row;
 }
 
-#boutons_filtres button{
+#filter_buttons button{
     background-color: #FFFFFF;
     border-left:0px;
     display: flex;
@@ -168,7 +168,7 @@ nav{
    
 }
 
-.icone_bouton{
+.button_icon{
     color:#0065FC;
     background-color:#DEEBFF;
     border-radius: 180px;
@@ -182,7 +182,7 @@ nav{
 }
 
 
-.texte_bouton{
+.button_text{
     border:#d3d1d1 solid 1px;
     border-radius: 180px;
     border-left:0px;
@@ -200,11 +200,11 @@ nav{
 /* SECTIONS */
 /* -------- */
 
-.conteneur_cartes p{
+.card_container p{
     font-size: 0.7em;
 }
 
-.étoiles{
+.stars{
     display:flex;
     font-size: 0.6em;
 }
@@ -217,15 +217,15 @@ nav{
     color:#cac9c9;
 }
 
-.conteneur_cartes a{
+.card_container a{
     box-shadow: 0px 5px 5px #c4c3c3;
 }
 
-#hébergements_trouvés, footer{
+#hebergements_found, footer{
     background-color: #F2F2F2;
 }
 
-#hébergements .conteneur_cartes{
+#hebergements .card_container{
     display:flex;
     /* flex-direction: row; */
     /* flex-wrap:wrap; */
@@ -235,16 +235,18 @@ nav{
     align-items: flex-end;
 }
 
-#hébergements a{
+#hebergements a{
     border-radius: 20px;
     background-color:#FFFFFF;
-    border:5px #FFFFFF solid;
-    /* margin: auto; */
+    /* mettre des padding car si border et background de la même couleur W3C n'aime pas */
+    /* border:5px #FFFFFF solid; */
+    padding: 5px;
+ 
     display:flex;
     flex-direction: column;
 }
 
-#activités a{
+#activites a{
     border-radius: 20px;
     background-color:#FFFFFF;
     display:flex;
