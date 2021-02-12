@@ -56,6 +56,7 @@ h1, h2{
     font-size:1.3em;
 }
 
+
 h3{
     font-size:0.8em;
 }
@@ -132,51 +133,67 @@ nav{
     align-items: center;
 }
 
+#filters h2{
+    margin-right:25px;
+    font-size:1em;
+}
+
 #filter_buttons{
     display:flex;
     flex-direction: row;
-    padding-left:25px;
 }
 
 #filter_buttons form{
-    margin-right:12px;
+    margin-right:20px;
     display: flex;
     flex-direction: row;
 }
 
 #filter_buttons button{
     background-color: #FFFFFF;
-    border-left:0px;
+    height:40px;
     display: flex;
     flex-direction: row;
     align-items:center;
-    border:0px;
-   
+    border-radius: 180px;
+    border:#d3d1d1 solid 1px;
+}
+
+#filter_buttons button:hover{
+    /* Au survol des boutons, on decale vers le bas/gauche et on afficher une ombre 
+        pour simuler  */
+    position:relative;
+    left:-4px;
+    bottom:-4px;
+    box-shadow: 4px -4px 5px #ebebeb;
+}
+
+#filter_buttons button:active{
+    /* Au moment du click le bouton reprends sa position initiale et il n'y a plus d'ombre */
+    position:relative;
+    left:0px;
+    bottom:0px;
+    box-shadow: none;
 }
 
 .button_icon{
     color:#0065FC;
+    font-size: 1.2em;
     background-color:#DEEBFF;
     border-radius: 180px;
-    height:31px;
-    width:31px;
+    height:40px;
+    width:40px;
     display: flex;
     justify-content: center;
     align-items:center;
-    margin-right:-28px;
+    margin-left:-12px; 
     z-index: 1;
 }
 
-
 .button_text{
-    border:#d3d1d1 solid 1px;
-    border-radius: 180px;
-    border-left:0px;
-    height:29px;
-    padding-left: 35px;
-    padding-right: 10px;
-    display: flex;
-    align-items:center;
+    padding-left: 7px;
+    padding-right: 5px;
+
 }
 
 
