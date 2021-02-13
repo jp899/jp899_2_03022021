@@ -196,6 +196,31 @@ nav{
 
 }
 
+/* Mise en forme de la phrose d'information */
+#info_nb_logements{
+    display:flex;   
+    flex-direction: row;
+    align-items:center;
+}
+#circle_info{
+    width:16px;
+    height:16px;
+    background-color:#FFFFFF;
+    border:1px solid #F2F2F2;
+    border-radius: 180px ;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+#circle_info i{
+    font-size:0.65em;
+    color:#0065FC;
+    background-color: #FFFFFF;
+}
+#info_text{
+    font-size: 0.7em;
+    margin-left:6px;
+}
 
 
 
