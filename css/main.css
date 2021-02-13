@@ -66,6 +66,11 @@ h3{
 /* HEADER */
 /* ------ */
 
+header{
+    margin-bottom:28px;
+}
+
+
 #banner{
     padding-top: 5px;
     display:flex;
@@ -206,7 +211,7 @@ nav{
     width:16px;
     height:16px;
     background-color:#FFFFFF;
-    border:1px solid #F2F2F2;
+    border:1px solid #dbdbdb;
     border-radius: 180px ;
     display:flex;
     justify-content: center;
@@ -219,7 +224,7 @@ nav{
 }
 #info_text{
     font-size: 0.7em;
-    margin-left:6px;
+    padding-left:6px;
 }
 
 
@@ -252,6 +257,11 @@ nav{
 #hebergements_found, footer{
     background-color: #F2F2F2;
 }
+
+#hebergements_found, #populaires{
+    padding:25px 20px 25px 20px;
+}
+
 
 #hebergements .card_container{
     display:flex;

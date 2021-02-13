@@ -14,6 +14,17 @@
     /* HEADER */
     /* ------ */
 
+    /* petit espace a gauche sur tou le header */
+    header{
+        padding-left: 5px;
+    }
+    /* Taille fixe de 200px à l'espace de saisie */
+    #search{
+        width:200px;
+    }
+    #search_bar_container{
+        margin-top: 18px;
+    }
 
     /* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
     #valid_button{
@@ -45,6 +56,10 @@
     
     #populaires{
         background-color: #F2F2F2;
+    }
+
+    #populaires, #hebergements_found{
+        border-radius:20px;
     }
     
     #hebergements_found img{

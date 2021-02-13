@@ -24,34 +24,73 @@
         order:3;
         width:100%;
         text-align: center;
-        margin-top:10px;
+        margin-top:17px;
+        font-size:0.95em;
     }
     #hebergements_link, #activites_link{
         width:50%;
-        padding-bottom:10px;
+        padding-bottom:11px;
+        margin-bottom: 17px;
     }
-    /* Bordure en dessous des liens au lieu d'en dessous */
-    #hebergements_link{
-        border-bottom:2px #0065FC solid; 
+    /* Marge a gauche du logo */
+    #logo_container{
+        margin-left: 16px;
     }
-    #activites_link{
-        border-bottom:2px #F2F2F2 solid; 
+    /* Lien d'inscription un peu plus petit */
+    #signup_link{
+        font-size: 0.95em;
     }
 
+    /* Bordure en dessous des liens au lieu d'en dessous */
+    #hebergements_link{
+        border-bottom:3px #0065FC solid; 
+    }
+    #activites_link{
+        border-bottom:3px #F2F2F2 solid; 
+    }
+
+    /* Marges a gauche et à droite plus importantes que le reste du header */
+    #site_description, #search_bar_container, #filters, #info_nb_logements{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    /* Legers ajustements sur le titre */
+    #site_description{
+        font-size:0.95em;
+    }
+    #site_description p{
+        margin-top:12px;
+    }
+
+    /* Mise en forme différente pour la barre de recherche */
+    #search_bar_container{
+        margin-top: 34px;
+    }
+    #search{
+        /* l'espace de saisie doit s'allonger pour prendre le max de largeur possible */
+        flex:1;
+        font-size:1.15em;
+    }
+    #locate_icon{
+        font-size:1.1em;
+        padding:17px 20px 17px 20px;
+        border-bottom-left-radius: 17px;
+        border-top-left-radius: 17px;
+    }
 
     /* Masquer le bouton avec texte, on affiche celui avec l'icone loupe uniquement */
     #valid_button{
-        font-size:0.9em;
-        padding:11px 11px 11px 11px;
-        margin-left:-8px;
-        border-radius: 10px;
+        font-size:1.05em;
+        padding-left: 18px;
+        padding-right:18px;
+        margin-left:-16px;
+        border-radius: 16px;
     }
-
     #valid_button_text{
         display:none;
     }
     
-
     /* Augmenter legèrement la taille de police de la phrase titre */
     h1{
         font-size:1.4em;
@@ -63,16 +102,50 @@
         align-items:flex-start;
     }
 
+
+    /* Mise en forme des boutons filtres */
+    #filters h2{
+        font-size:1.1em;
+    }
+    #filter_buttons form{
+        margin-right:15px;
+ 
+    }
+    #filter_buttons button{
+        height:50px;
+        border:#d3d1d1 solid 2px;
+    }
+    .button_icon{
+        font-size: 1.4em;
+        height:50px;
+        width:50px;
+    }
+    .button_text{
+        font-size:1.1em;
+    }
     /* Boutons sur plusieurs lignes */
     #filter_buttons{
         flex-wrap: wrap;
-        margin-top:-15px;
-
     }
 
     #filter_buttons form{
-        margin-top:10px;
+        margin-bottom:14px;
     }
+
+    /* Augmenter  la taille de de la phrase d'info */
+    #circle_info{
+        height:23px;
+        width:23px;
+        align-self:flex-start;
+    }
+    #circle_info i{
+        font-size:0.70em;
+    }
+    #info_text{
+        font-size:0.95em;
+        width: 90%;
+    }
+    
 
     /* -------- */
     /* SECTIONS */
