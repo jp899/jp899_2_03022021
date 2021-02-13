@@ -254,7 +254,7 @@ nav{
     box-shadow: 0px 5px 5px #c4c3c3;
 }
 
-#hebergements_found, footer{
+#footer{
     background-color: #F2F2F2;
 }
 
@@ -273,6 +273,8 @@ nav{
     align-items: flex-end;
 }
 
+
+
 #hebergements a{
     border-radius: 20px;
     background-color:#FFFFFF;
@@ -284,6 +286,34 @@ nav{
     flex-direction: column;
 }
 
+
+#populaires{
+    background-color: #F2F2F2;
+}
+
+#populaires h2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#populaires a{
+    border-radius: 20px;
+    background-color:#FFFFFF;
+    /* mettre des padding car si border et background de la même couleur W3C n'aime pas */
+    /* border:5px #FFFFFF solid; */
+    padding: 5px;
+ 
+    display:flex;
+    flex-direction: row;
+}
+
+.populaires_text{
+    margin-left:15px;
+    display:flex;
+    flex-direction: column;
+}
+
 #activites a{
     border-radius: 20px;
     background-color:#FFFFFF;
@@ -291,6 +321,31 @@ nav{
     margin: auto;
     flex-direction: column;
 }
+
+
+#hebergements_found img{
+    width: 220px;
+    height: 110px;
+    object-fit:cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#populaires img{
+    width: 120px;
+    height: 120px;
+    object-fit:cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#activites img{
+    width: 250px;
+    height: 330px;
+    object-fit:cover;
+
+}
+
 
 
 /* ------ */

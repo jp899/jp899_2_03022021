@@ -150,25 +150,17 @@
     /* -------- */
     /* SECTIONS */
     /* -------- */
-
-    #hebergements_found img{
-        width: 220px;
-        height: 110px;
-        object-fit:cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+    /* disposition en colonne plutot que sur une meme ligne 
+        et inversion de l'ordre des sections populaires et hébergements_trouvés */
+    #hebergements{
+        display:flex;
+        flex-direction: column;
     }
-    
-    #populaires img{
-        width: 120px;
-        height: 120px;
-        object-fit:cover;
+    #populaires{
+        order:1;
     }
-    
-    #activites img{
-        width: 250px;
-        height: 330px;
-        object-fit:cover;
+    #hebergements_found{
+        order:2;
     }
 
     /* ------ */

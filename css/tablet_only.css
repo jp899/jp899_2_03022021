@@ -25,6 +25,14 @@
     /* SECTIONS */
     /* -------- */
 
+    #populaires{
+        margin-top:20px;
+
+    }
+
+    #populaires a{
+        width: 30%;
+    }
 
 
     /* ------ */

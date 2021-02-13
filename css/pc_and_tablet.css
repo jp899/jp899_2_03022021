@@ -14,7 +14,7 @@
     /* HEADER */
     /* ------ */
 
-    /* petit espace a gauche sur tou le header */
+    /* petit espace a gauche sur tout le header */
     header{
         padding-left: 5px;
     }
@@ -53,34 +53,18 @@
     /* -------- */
     /* SECTIONS */
     /* -------- */
+
+
     
-    #populaires{
-        background-color: #F2F2F2;
+    #hebergements_found{
+        background-color:#F2F2F2;
     }
 
     #populaires, #hebergements_found{
         border-radius:20px;
     }
     
-    #hebergements_found img{
-        width: 220px;
-        height: 110px;
-        object-fit:cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-    
-    #populaires img{
-        width: 120px;
-        height: 120px;
-        object-fit:cover;
-    }
-    
-    #activites img{
-        width: 250px;
-        height: 330px;
-        object-fit:cover;
-    }
+
 
     #activites a{
         width: 250px;

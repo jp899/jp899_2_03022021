@@ -28,7 +28,28 @@
     /* -------- */
     /* SECTIONS */
     /* -------- */
+    #hebergements{
+        display:flex;
+        flex-direction: row;
+    }
 
+    #hebergements_found{
+        flex:2.3;
+
+    }
+
+    #populaires{
+        margin-left:20px;
+        flex:1;
+    }
+
+    #populaires img{
+        width: 100px;
+        height: 100px;
+        object-fit:cover;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
 
     /* ------ */
     /* FOOTER */
