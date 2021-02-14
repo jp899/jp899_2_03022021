@@ -43,7 +43,7 @@
 }
 
 /* Détermination des éléments en texte gras */
-h1, h2, h3, .price, .button_text, #signup_link, #search, #valid_button_text{
+h1, h2, h3, .price, .button_text, #signup_link, #search, #valid_button_text,#hebergements_found_more{
     font-weight:bold;
 }
 
@@ -52,13 +52,14 @@ a{
     color:black;
 }
 
-h1, h2{
+h1{
     font-size:1.3em;
 }
-
-
+h2{
+    font-size:0.9em;
+}
 h3{
-    font-size:0.8em;
+    font-size:0.68em;
 }
 
 
@@ -239,15 +240,17 @@ nav{
 
 .stars{
     display:flex;
-    font-size: 0.6em;
+    font-size: 0.45em;
 }
 
 .star_on{
     color:#0065FC;
+    margin-right:1px;
 }
 
 .star_off{
     color:#cac9c9;
+    margin-right:1px;
 }
 
 .card_container a{
@@ -259,8 +262,15 @@ nav{
 }
 
 #hebergements_found, #populaires{
-    padding:25px 20px 25px 20px;
+    padding:25px 25px 25px 25px;
 }
+#hebergements_found h2, #populaires h2{
+    margin-bottom: 16px; 
+}
+
+
+
+
 
 
 #hebergements .card_container{
@@ -287,6 +297,8 @@ nav{
 }
 
 
+
+
 #populaires{
     background-color: #F2F2F2;
 }
@@ -298,11 +310,12 @@ nav{
 }
 
 #populaires a{
-    border-radius: 20px;
+    border-radius: 15px;
     background-color:#FFFFFF;
     /* mettre des padding car si border et background de la même couleur W3C n'aime pas */
     /* border:5px #FFFFFF solid; */
-    padding: 5px;
+    padding: 4px;
+    margin-bottom: 22px;
  
     display:flex;
     flex-direction: row;
@@ -310,8 +323,28 @@ nav{
 
 .populaires_text{
     margin-left:15px;
+    padding-right: 5px;
     display:flex;
     flex-direction: column;
+    /* display: none; */
+    
+}
+
+.populaires_text h3{
+    margin-top: 7px;
+ 
+    margin-bottom: 5px;
+    
+}
+
+.populaires_text p{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 0.6em;
+}
+
+.populaires_text .stars{
+    margin-top: 12px;
 }
 
 #activites a{
@@ -335,8 +368,8 @@ nav{
     width: 120px;
     height: 120px;
     object-fit:cover;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 #activites img{
