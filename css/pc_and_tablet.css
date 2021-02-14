@@ -68,6 +68,26 @@
         width: 250px;
     }
 
+    #hebergements_found a{
+        margin-bottom: 20px;
+    }
+
+    #hebergements_found img{
+        width: 158px;
+        height: 76px;
+        object-fit:cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+    #populaires img{
+        width: 85px;
+        height: 85px;
+        object-fit:cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
 
     /* ------ */
     /* FOOTER */

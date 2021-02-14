@@ -234,118 +234,120 @@ nav{
 /* SECTIONS */
 /* -------- */
 
-.card_container p{
-    font-size: 0.7em;
-}
 
-.stars{
-    display:flex;
-    font-size: 0.45em;
-}
-
-.star_on{
-    color:#0065FC;
-    margin-right:1px;
-}
-
-.star_off{
-    color:#cac9c9;
-    margin-right:1px;
-}
-
+/* Commun toutes Sections */
 .card_container a{
-    box-shadow: 0px 5px 5px #c4c3c3;
+    box-shadow: 0px 4px 8px #d3d3d3;
 }
 
-#footer{
-    background-color: #F2F2F2;
-}
+/* Commun Populaires + Hébergements trouvés */
 
 #hebergements_found, #populaires{
-    padding:25px 25px 25px 25px;
+    padding:25px 25px 15px 25px;
 }
 #hebergements_found h2, #populaires h2{
     margin-bottom: 16px; 
 }
-
-
-
-
-
-
 #hebergements .card_container{
     display:flex;
-    /* flex-direction: row; */
-    /* flex-wrap:wrap; */
     flex-flow: row wrap;
-    /* align-content: space-between; */
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
+}
+.stars{
+    display:flex;
+    font-size: 0.5em;
+}
+.star_on{
+    color:#0065FC;
+    margin-right:1px;
+}
+.star_off{
+    color:#cac9c9;
+    margin-right:1px;
+}
+.card_container p{
+    font-size: 0.6em;
 }
 
 
 
-#hebergements a{
-    border-radius: 20px;
+/* spécifique Hebergements Trouvés */
+
+#hebergements_found a{
+    border-radius: 12px;
     background-color:#FFFFFF;
-    /* mettre des padding car si border et background de la même couleur W3C n'aime pas */
-    /* border:5px #FFFFFF solid; */
-    padding: 5px;
- 
+    padding: 3px;
     display:flex;
     flex-direction: column;
 }
 
+/* #hebergements_found img{
+    width: 220px;
+    height: 110px;
+    object-fit:cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+} */
+#hebergements_found h3, #hebergements_found a p, #hebergements_found .stars{
+    padding-left:8px;
+}
+#hebergements_found h3{
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+#hebergements_found a p{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#hebergements_found .stars{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
 
+#hebergements_found_more{
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
+/* spécifique Populaires */
 
 #populaires{
     background-color: #F2F2F2;
 }
-
 #populaires h2{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 #populaires a{
-    border-radius: 15px;
+    border-radius: 12px;
     background-color:#FFFFFF;
-    /* mettre des padding car si border et background de la même couleur W3C n'aime pas */
-    /* border:5px #FFFFFF solid; */
-    padding: 4px;
+    padding: 3px;
     margin-bottom: 22px;
- 
     display:flex;
     flex-direction: row;
 }
-
 .populaires_text{
     margin-left:15px;
     padding-right: 5px;
     display:flex;
     flex-direction: column;
-    /* display: none; */
-    
 }
-
 .populaires_text h3{
     margin-top: 7px;
- 
     margin-bottom: 5px;
-    
 }
-
 .populaires_text p{
     margin-top: 0px;
-    padding-top: 0px;
-    font-size: 0.6em;
 }
-
 .populaires_text .stars{
     margin-top: 12px;
 }
+
+
+/* spécifique Activités */
 
 #activites a{
     border-radius: 20px;
@@ -353,23 +355,6 @@ nav{
     display:flex;
     margin: auto;
     flex-direction: column;
-}
-
-
-#hebergements_found img{
-    width: 220px;
-    height: 110px;
-    object-fit:cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-#populaires img{
-    width: 120px;
-    height: 120px;
-    object-fit:cover;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
 }
 
 #activites img{
@@ -387,7 +372,9 @@ nav{
 
 footer{
     display:flex;
+    background-color: #F2F2F2;
 }
+
 
 ul{
     list-style-type:none;
