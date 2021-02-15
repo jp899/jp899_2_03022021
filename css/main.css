@@ -42,6 +42,18 @@
     font-family: "Raleway", sans-serif;
 }
 
+body{
+    width:100%;
+    max-width:992px;
+    margin:auto;
+}
+
+header, #hebergements, #activites{
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Détermination des éléments en texte gras */
 h1, h2, h3, .price, .button_text, #signup_link, #search, #valid_button_text,#hebergements_found_more{
     font-weight:bold;
@@ -69,8 +81,9 @@ h3{
 
 header{
     margin-bottom:28px;
+    /* petit espace a gauche sur tout le header pour PC/tablette*/
+    padding-left: 5px;
 }
-
 
 #banner{
     padding-top: 5px;
@@ -88,10 +101,18 @@ nav{
 #signup_link, #activites_link, #hebergements_link{
     padding-left:15px;
     padding-right:15px;
+    padding-top:25px;
 }
 
 #signup_link, #hebergements_link{
     color:#0065FC;
+}
+/* Effet au survol des deux liens de navigation */
+#hebergements_link:hover{
+    border-top:2px #0065FC solid; 
+}
+#activites_link:hover{
+    border-top:2px #F2F2F2 solid; 
 }
 
 /* Reduire l'espacement entre les deux phrases de description */
@@ -104,18 +125,19 @@ nav{
 
 
 /* Mise en forme de la barre de recherche */
+#search_bar_container{
+    margin-top: 18px;
+}
 #search_bar{
     display:flex;
     flex-direction: row;
 }
-
 #locate_icon{
     background-color:#F2F2F2 ;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     padding:10px 13px 12px 13px;
 }
-
 #search{
     padding:10px;
     margin-right:0px;
@@ -123,14 +145,24 @@ nav{
     border:#F2F2F2 solid 1px;
     border-left: 0px;
     border-right:0px;
-}
 
+    /* Taille fixe de 200px à l'espace de saisie pour PC/Tablette*/
+    width:200px;
+}
 #valid_button{
     background-color:#0065FC; 
     color:#FFFFFF;
     border:0px;
+    font-size: 0.7em;
+    padding:11px;
+    margin-left:-5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
-
+/* Masquer le bouton avec l'icone loupe, on affiche celui avec le texte uniquement */
+#valid_button_icon{
+    display:none;
+}
 
 /* Mise en forme des boutons filtres */
 #filters{
@@ -138,23 +170,19 @@ nav{
     flex-direction: row;
     align-items: center;
 }
-
 #filters h2{
     margin-right:25px;
     font-size:1em;
 }
-
 #filter_buttons{
     display:flex;
     flex-direction: row;
 }
-
 #filter_buttons form{
     margin-right:20px;
     display: flex;
     flex-direction: row;
 }
-
 #filter_buttons button{
     background-color: #FFFFFF;
     height:40px;
@@ -164,16 +192,13 @@ nav{
     border-radius: 180px;
     border:#d3d1d1 solid 1px;
 }
-
 #filter_buttons button:hover{
-    /* Au survol des boutons, on decale vers le bas/gauche et on afficher une ombre 
-        pour simuler  */
+    /* Au survol des boutons, on decale vers le bas/gauche et on afficher une ombre  */
     position:relative;
     left:-4px;
     bottom:-4px;
     box-shadow: 4px -4px 5px #ebebeb;
 }
-
 #filter_buttons button:active{
     /* Au moment du click le bouton reprends sa position initiale et il n'y a plus d'ombre */
     position:relative;
@@ -181,7 +206,6 @@ nav{
     bottom:0px;
     box-shadow: none;
 }
-
 .button_icon{
     color:#0065FC;
     font-size: 1.2em;
@@ -195,14 +219,13 @@ nav{
     margin-left:-12px; 
     z-index: 1;
 }
-
 .button_text{
     padding-left: 7px;
     padding-right: 5px;
 
 }
 
-/* Mise en forme de la phrose d'information */
+/* Mise en forme de la phrase d'information */
 #info_nb_logements{
     display:flex;   
     flex-direction: row;
@@ -243,7 +266,9 @@ nav{
 /* Commun Populaires + Hébergements trouvés */
 
 #hebergements_found, #populaires{
-    padding:25px 25px 15px 25px;
+    padding-top:20px;
+    padding-bottom:5px;
+    border-radius:20px;
 }
 #hebergements_found h2, #populaires h2{
     margin-bottom: 16px; 
@@ -252,7 +277,6 @@ nav{
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-end;
 }
 .stars{
     display:flex;
@@ -273,38 +297,42 @@ nav{
 
 
 /* spécifique Hebergements Trouvés */
-
+#hebergements_found{
+    background-color:#F2F2F2;
+}
+#hebergements_found .card_container, #hebergements_found h2, #hebergements_found_more{
+    width:91%;
+    margin-left: auto;
+    margin-right: auto;
+}
 #hebergements_found a{
     border-radius: 12px;
     background-color:#FFFFFF;
     padding: 3px;
     display:flex;
     flex-direction: column;
+    height:130px;
+    width:30%;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
-
-/* #hebergements_found img{
-    width: 220px;
-    height: 110px;
+#hebergements_found img{
+    width:100%;
+    height:61%;
     object-fit:cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-} */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 #hebergements_found h3, #hebergements_found a p, #hebergements_found .stars{
-    padding-left:8px;
-}
-#hebergements_found h3{
-    margin-top: 6px;
-    margin-bottom: 4px;
-}
-#hebergements_found a p{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px
 }
 #hebergements_found .stars{
-    margin-top: 0px;
-    margin-bottom: 5px;
+    padding-bottom: 0.5em;
 }
-
 #hebergements_found_more{
     font-size: 0.8em;
     margin-top: 5px;
@@ -317,53 +345,84 @@ nav{
     background-color: #F2F2F2;
 }
 #populaires h2{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #populaires a{
+    width:80%;
+    height:90px;
+
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 12px;
     background-color:#FFFFFF;
     padding: 3px;
     margin-bottom: 22px;
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+#populaires img{
+    width: 38%;
+    height: 100%;
+    object-fit:cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .populaires_text{
-    margin-left:15px;
-    padding-right: 5px;
+    width:53%;
+    padding: 4% 3% 3% 0%;
     display:flex;
     flex-direction: column;
+    justify-content:  space-between;
 }
 .populaires_text h3{
-    margin-top: 7px;
-    margin-bottom: 5px;
+    margin:0%;
 }
 .populaires_text p{
-    margin-top: 0px;
+    margin:0%;
+    height: 40%;
 }
 .populaires_text .stars{
-    margin-top: 12px;
+    margin:0%;
 }
 
 
 /* spécifique Activités */
-
+#activites{
+    margin-top:40px;
+    margin-bottom: 30px;
+}
+#activites .card_container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 320px;
+    align-content:space-between;
+}
 #activites a{
-    border-radius: 20px;
+    border-radius: 12px;
     background-color:#FFFFFF;
     display:flex;
     margin: auto;
     flex-direction: column;
-}
 
+    width: 210px;
+}
 #activites img{
-    width: 250px;
-    height: 330px;
+    width: 210px;
+    height: 260px;
     object-fit:cover;
-
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
-
+#activites h3{
+    padding-left:13px;
+}
 
 
 /* ------ */
@@ -374,7 +433,6 @@ footer{
     display:flex;
     background-color: #F2F2F2;
 }
-
 
 ul{
     list-style-type:none;

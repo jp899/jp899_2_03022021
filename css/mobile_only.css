@@ -4,16 +4,20 @@
 
 @media all and (max-width:767px){
 
-    #body
-    {
-        /* Largeur de la page auto pluto que 900px */
-        width: auto;
-    }
 
+    /* Réautoriser les sections à s'étendre sur toute la largeur */
+    header, #hebergements, #activites{
+        width:100%;
+    }
 
     /* ------ */
     /* HEADER */
     /* ------ */
+
+
+    header{
+        padding-left: 0px;
+    }
 
     /* Affichage logo/navigation sur deux lignes. Les liens hébergements et activités sont sur la seconde ligne */
     #banner{
@@ -31,14 +35,18 @@
         width:50%;
         padding-bottom:11px;
         margin-bottom: 17px;
+        padding-top :0px;
     }
+
     /* Marge a gauche du logo */
     #logo_container{
         margin-left: 16px;
     }
+
     /* Lien d'inscription un peu plus petit */
     #signup_link{
         font-size: 0.95em;
+        padding-top :0px;
     }
 
     /* Bordure en dessous des liens au lieu d'en dessous */
@@ -49,15 +57,24 @@
         border-bottom:3px #F2F2F2 solid; 
     }
 
-    /* Marges a gauche et à droite plus importantes que le reste du header */
+    /* Supprimer l'effet au survol */
+    #hebergements_link:hover, #activites_link:hover{
+        border-top:0px; 
+    }
+
+    
     #site_description, #search_bar_container, #filters, #info_nb_logements{
+        /* Marges a gauche et à droite plus importantes que le reste du header */
         margin-left: 15px;
         margin-right: 15px;
     }
-
-    /* Legers ajustements sur le titre */
+    
+    /* Légers ajustements sur le titre de la page*/
     #site_description{
         font-size:0.95em;
+    }
+    h1{
+        font-size:1.4em;
     }
     #site_description p{
         margin-top:12px;
@@ -78,8 +95,6 @@
         border-bottom-left-radius: 17px;
         border-top-left-radius: 17px;
     }
-
-    /* Masquer le bouton avec texte, on affiche celui avec l'icone loupe uniquement */
     #valid_button{
         font-size:1.05em;
         padding-left: 18px;
@@ -87,14 +102,14 @@
         margin-left:-16px;
         border-radius: 16px;
     }
+    /* Masquer le bouton avec texte, on affiche celui avec l'icone loupe uniquement */
     #valid_button_text{
         display:none;
     }
-    
-    /* Augmenter legèrement la taille de police de la phrase titre */
-    h1{
-        font-size:1.4em;
+    #valid_button_icon{
+        display:block;
     }
+    
 
     /* Titre filtre au dessus des filtres */
     #filters{
@@ -150,18 +165,42 @@
     /* -------- */
     /* SECTIONS */
     /* -------- */
-    /* disposition en colonne plutot que sur une meme ligne 
+    
+    #populaires, #hebergements_found{
+        border-radius:0px;
+    }
+    
+    /* disposition en colonne plutot que sur une même ligne 
         et inversion de l'ordre des sections populaires et hébergements_trouvés */
     #hebergements{
         display:flex;
         flex-direction: column;
     }
+    #hebergements_found{
+        background-color:#FFFFFF;
+        order:2;
+    }
     #populaires{
         order:1;
     }
-    #hebergements_found{
-        order:2;
+
+
+
+    #activites .card_container{
+        flex-wrap: nowrap;
+        height: auto;
     }
+    #activites a{
+        width: 90%;
+        height:260px;
+    }
+    #activites img{
+        width: 100%;
+        height: 85%;
+        object-fit:cover;
+   
+    }
+
 
     /* ------ */
     /* FOOTER */

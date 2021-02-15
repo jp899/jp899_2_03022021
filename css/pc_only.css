@@ -5,16 +5,6 @@
 
 @media all and (min-width:992px){
 
-    body{
-        width: 992px;
-        margin: auto;
-    }
-
-
-    header, #hebergements, #activites{
-        width: 90%;
-    }
-
 
     /* ------ */
     /* HEADER */
@@ -31,25 +21,34 @@
     #hebergements{
         display:flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     #hebergements_found{
-        flex:2.3;
+        width:65.3%;
     }
 
     #populaires{
-        margin-left:20px;
-        flex:1;
+        width:31.6%;
     }
 
+
+
+    #activites .card_container a:nth-child(2) img{
+        height: 130px;
+    }
+    #activites .card_container a:nth-child(3) img{
+        height: 70px;
+    }
+    #activites .card_container a:nth-child(5) img,
+    #activites .card_container a:nth-child(6) img{
+        height: 100px;
+    }
 
 
     /* ------ */
     /* FOOTER */
     /* ------ */
 
-    /* Le footer est un peu plus large que le header et les sections */
-    footer{
-        width: 100%;
-    }
+
 }
