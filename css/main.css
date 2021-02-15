@@ -432,12 +432,28 @@ nav{
 footer{
     display:flex;
     background-color: #F2F2F2;
+    font-size: 0.7em;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 15px;
 }
 
-ul{
+#nos_hebergements, #a_propos, #assistance{
+    width: 28%;
+}
+
+footer h1{
+    font-size: 1.1em;
+}
+
+footer ul{
     list-style-type:none;
+    font-size: 1em;
+    padding-left: 0px;
 }
 
-
+footer li{
+    padding-bottom: 7px;
+}
 
 
