@@ -233,7 +233,7 @@
         width:100%;
         padding: 5px;
         border-radius: 18px;
-        height:190px; */
+        height:190px; 
     }
     #hebergements_found img{
         border-top-left-radius: 14px;
@@ -255,25 +255,62 @@
     } 
 
     /* AJUSTEMENTS SUR SECTION ACTIVITES */
-
+    #activites .card_container, #activites h2{
+        width:88%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #activites h2{
+        margin-bottom: 28px;
+    }
     #activites .card_container{
         flex-wrap: nowrap;
-        height: auto;
+        height:auto;
     }
     #activites a{
-        width: 90%;
-        height:260px;
+        width: 100%;
+        height:190px;
+        border-radius: 18px;
+        margin-bottom: 22px;
     }
     #activites img{
-        width: 100%;
-        height: 85%;
-        object-fit:cover;
-   
+        height: 70%;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+    #activites h3{
+        font-size:1em;
+        padding-left:15px;
+        margin-top:auto;
+        margin-bottom:auto;
     }
 
 
     /* ------ */
     /* FOOTER */
     /* ------ */
+
+    footer{
+        flex-direction:column;
+        padding-top: 30px;
+    } 
+    
+    #nos_hebergements, #a_propos, #assistance{
+        width:88%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:8px; 
+    }
+    footer h1{
+        font-size: 1.4em;
+    }
+    
+    footer ul{
+        font-size: 1.3em;
+    }
+
+    footer li{
+        padding-bottom: 10px;
+    }
 
 }
