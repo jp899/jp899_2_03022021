@@ -14,7 +14,6 @@
     /* HEADER */
     /* ------ */
 
-
     header{
         padding-left: 0px;
     }
@@ -61,7 +60,6 @@
     #hebergements_link:hover, #activites_link:hover{
         border-top:0px; 
     }
-
     
     #site_description, #search_bar_container, #filters, #info_nb_logements{
         /* Marges a gauche et à droite plus importantes que le reste du header */
@@ -162,13 +160,10 @@
     }
     
 
+
     /* -------- */
     /* SECTIONS */
     /* -------- */
-    
-    #populaires, #hebergements_found{
-        border-radius:0px;
-    }
     
     /* disposition en colonne plutot que sur une même ligne 
         et inversion de l'ordre des sections populaires et hébergements_trouvés */
@@ -183,8 +178,83 @@
     #populaires{
         order:1;
     }
+    /* Enlever l'arrondi sur les coins des sections */
+    #populaires, #hebergements_found{
+        border-radius:0px;
+    }
+    
+    /* Agrandir les titres des sections */
+    #populaires h2, #hebergements_found h2, #activites h2{
+        font-size:1.3em;
+    }
+
+    /* AJUSTEMENTS SUR SECTION POPULAIRES */
+
+    /* Permettre aux cartes populaires de prendre un peu plus d'espace en largeur
+        et modifier l'aspect et aggrandir les polices */
+    #populaires{
+        padding-bottom:20px;
+    }
+    #populaires h2{
+        width:88%;
+        margin-bottom: 20px;
+    }
+    #populaires a{
+        width:86%;
+        height:130px;
+        border-radius: 18px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    #populaires img{
+        width: 38%;
+        height: 100%;
+        object-fit:cover;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
+    .populaires_text h3{
+        font-size: 1em;
+    }
+    .populaires_text p{
+        font-size: 0.9em;
+    }
+    .populaires_text .stars{
+        font-size: 0.7em;
+    }
 
 
+
+    /* AJUSTEMENTS SUR SECTION HEBERGEMENTS TROUVES */
+    #hebergements_found .card_container, #hebergements_found h2, #hebergements_found_more{
+        width:88%;
+    }
+    #hebergements_found a{
+        width:100%;
+        padding: 5px;
+        border-radius: 18px;
+        height:190px; */
+    }
+    #hebergements_found img{
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+
+    #hebergements_found h3{
+        font-size: 1em;
+    }
+    #hebergements_found a p{
+        font-size: 0.9em;
+    }
+    #hebergements_found .stars{
+        font-size: 0.75em;
+    } 
+    #hebergements_found_more{
+        font-size: 1.1em;
+        margin-top: 10px;
+    } 
+
+    /* AJUSTEMENTS SUR SECTION ACTIVITES */
 
     #activites .card_container{
         flex-wrap: nowrap;
