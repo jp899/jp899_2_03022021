@@ -21,13 +21,46 @@
     /* SECTIONS */
     /* -------- */
 
-    #populaires{
-        margin-top:20px;
-
+    #hebergements_found_more{
+        margin-bottom:20px;
     }
 
+    #populaires{
+        margin-top:20px;
+    }
+
+    /* Aligner le contenu de populaires au même niveau le contenue de hébergements trouvés */
+    #populaires .card_container, #populaires h2{
+        width:91%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Afficher les cartes populaires sur une même ligne  */
+    #populaires .card_container{
+        justify-content: space-between;
+    }
     #populaires a{
         width: 30%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    /* répartir les activités sur 3 colonnes au lieu de 4 */
+    #activites a{
+        width:31%;
+    }
+    /* Donner une taille différente aux cartes activités pour les faire rentrer sur 3 colonnes */
+    #activites .card_container a:nth-child(1) img,
+    #activites .card_container a:nth-child(4) img,
+    #activites .card_container a:nth-child(5) img{
+        height: 130px;
+    }
+    
+    #activites .card_container a:nth-child(2) img,
+    #activites .card_container a:nth-child(3) img,
+    #activites .card_container a:nth-child(6) img{
+        height: 70px;
     }
 
 
