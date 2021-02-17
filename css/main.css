@@ -232,8 +232,8 @@ nav{
     align-items:center;
 }
 #circle_info{
-    width:16px;
-    height:16px;
+    width:20px;
+    height:20px;
     background-color:#FFFFFF;
     border:1px solid #dbdbdb;
     border-radius: 180px ;
@@ -242,12 +242,12 @@ nav{
     align-items:center;
 }
 #circle_info i{
-    font-size:0.65em;
+    font-size:0.7em;
     color:#0065FC;
     background-color: #FFFFFF;
 }
 #info_text{
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding-left:6px;
 }
 
@@ -291,7 +291,7 @@ nav{
     margin-right:1px;
 }
 .card_container p{
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 
