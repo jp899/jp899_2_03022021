@@ -1,0 +1,100 @@
+
+
+/* ------------------------------------------- */
+/* Affichage spécifique PC ECRAN LARGE         */
+/* ------------------------------------------- */
+
+@media all and (min-width:1200px){
+
+    body{
+        max-width:1280px;
+    }
+
+    /* Agrandir la taille de polices de plusieurs éléments */
+    .card_container p{
+        font-size: 0.8em ;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+    h3{
+        font-size: 0.9em;
+    }
+    .stars{
+        font-size:0.7em;
+    }
+
+    /* ------ */
+    /* HEADER */
+    /* ------ */
+
+    /* Abbaisser un peu le logo par rapport au bord haut de la page */
+    #logo_container{
+        margin-top: 17px;
+    }
+
+    /* -------- */
+    /* SECTIONS */
+    /* -------- */
+
+    #hebergements{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    #hebergements_found{
+        width:65.3%;
+    }
+    #hebergements_found a{
+        height:170px;
+        padding:4px;
+    }
+    #hebergements_found_more{
+        font-size: 1em;
+    } 
+
+
+    #populaires{
+        width:31.6%;
+    }
+    #populaires a{
+        height:120px;
+        padding:4px;
+    }
+
+
+    #activites .card_container{
+        height: 400px;
+    }
+    #activites .card_container a:nth-child(1) img,
+    #activites .card_container a:nth-child(4) img{
+        height: 354px;
+    }
+    #activites .card_container a:nth-child(2) img{
+        height: 175px;
+    }
+    #activites .card_container a:nth-child(3) img{
+        height: 95px;
+    }
+    #activites .card_container a:nth-child(5) img,
+    #activites .card_container a:nth-child(6) img{
+        height: 135px;
+    }
+
+
+    /* ------ */
+    /* FOOTER */
+    /* ------ */
+
+
+    /* Agrandir la taille de polices*/
+    footer h1{
+        font-size: 1.4em;
+    }
+    footer ul{
+        font-size: 1.3em;
+    }
+
+}

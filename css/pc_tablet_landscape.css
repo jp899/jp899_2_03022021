@@ -1,10 +1,9 @@
 
-/* ----------------------- */
-/* Affichage spécifique PC */
-/* ----------------------- */
+/* ------------------------------------------- */
+/* Affichage spécifique PC ET TABLETTE PAYSAGE */
+/* ------------------------------------------- */
 
-@media all and (min-width:992px){
-
+@media all and (min-width:992px) and (max-width:1199.99px){
 
     /* ------ */
     /* HEADER */
@@ -18,6 +17,7 @@
     /* -------- */
     /* SECTIONS */
     /* -------- */
+    
     #hebergements{
         display:flex;
         flex-direction: row;
@@ -32,13 +32,18 @@
         width:31.6%;
     }
 
-
-
+    #activites .card_container{
+        height: 300px;
+    }
+    #activites .card_container a:nth-child(1) img,
+    #activites .card_container a:nth-child(4) img{
+        height: 266px;
+    }
     #activites .card_container a:nth-child(2) img{
         height: 130px;
     }
     #activites .card_container a:nth-child(3) img{
-        height: 70px;
+        height: 72px;
     }
     #activites .card_container a:nth-child(5) img,
     #activites .card_container a:nth-child(6) img{
@@ -49,6 +54,7 @@
     /* ------ */
     /* FOOTER */
     /* ------ */
+
 
 
 }

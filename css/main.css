@@ -44,7 +44,6 @@
 
 body{
     width:100%;
-    max-width:992px;
     margin:auto;
 }
 
@@ -409,12 +408,12 @@ nav{
     flex-wrap: wrap;
     height: 320px;
     align-content:space-between;
+    justify-content: space-between;
 }
 #activites a{
     border-radius: 12px;
     background-color:#FFFFFF;
     display:flex;
-    margin: auto;
     flex-direction: column;
     width:23%;
 }
